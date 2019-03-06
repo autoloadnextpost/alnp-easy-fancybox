@@ -13,7 +13,7 @@ Enables Easy Fancybox to be ready when a post is loaded to allow new media links
 
 == Description ==
 
-Overview of the add-on goes here.
+This add-on enables Easy Fancybox to be ready when a post has loaded via Auto Load Next Post to allow new media links to be active.
 
 **Requires**
 
