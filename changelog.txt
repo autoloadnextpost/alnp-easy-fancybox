@@ -1,0 +1,4 @@
+*** Auto Load Next Post: Easy Fancybox - Changelog ***
+
+Version 1.0.0
+* Initial version.
