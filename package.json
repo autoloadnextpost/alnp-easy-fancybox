@@ -23,7 +23,7 @@
   "required_alnp": "1.4.10",
   "license": "GPL-2.0",
   "copyright": "Copyright (c) 2019, Sébastien Dumont",
-  "description": "Enables Easy Fancybox to be ready when a post is loaded to allow new media links to be active.",
+  "description": "Enables Easy Fancybox to be ready when a post has loaded to allow new media links to be active.",
   "tags": "",
   "keywords": [
     "fancybox",
