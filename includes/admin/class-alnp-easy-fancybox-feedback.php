@@ -286,7 +286,7 @@ if ( ! class_exists( 'ALNP_Easy_Fancybox_Feedback' ) ) {
 						</p>
 					</div>
 					<div class="alnp-install-now">
-						<?php printf( '<a href="%1$s" class="button button-primary alnp-install-button" target="_blank">%2$s</a>', esc_url( ALNP_ADDON_REVIEW_URL . '#new-post' ), esc_html__( 'Leave a Review', 'alnp-easy-fancybox' ) ); ?>
+						<?php printf( '<a href="%1$s" class="button button-primary alnp-install-button" target="_blank">%2$s</a>', esc_url( ALNP_EASY_FANCYBOX_REVIEW_URL . '#new-post' ), esc_html__( 'Leave a Review', 'alnp-easy-fancybox' ) ); ?>
 						<a href="<?php echo esc_url( $no_bug_url ); ?>" class="no-thanks"><?php echo esc_html__( 'No thanks / I already have', 'alnp-easy-fancybox' ); ?></a>
 					</div>
 				</div>
@@ -317,7 +317,7 @@ if ( ! class_exists( 'ALNP_Easy_Fancybox_Feedback' ) ) {
  */
 new ALNP_Easy_Fancybox_Feedback(
 	array(
-		'slug'       => 'alnp_addon_name_plugin_feedback',
+		'slug'       => 'alnp_easy_fancybox_plugin_feedback',
 		'name'       => __( 'Auto Load Next Post: Easy Fancybox', 'alnp-easy-fancybox' ),
 		'time_limit' => WEEK_IN_SECONDS,
 	)

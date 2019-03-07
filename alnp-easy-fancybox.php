@@ -119,18 +119,18 @@ if ( ! class_exists( 'ALNP_Easy_Fancybox' ) ) {
 		 * Setup plugin constants.
 		 *
 		 * @access private
-		 * @since  2.0.0
+		 * @since  1.0.0
 		 * @return void
 		 */
 		private function constants() {
-			$this->define( 'ALNP_ADDON_VERSION', self::$version );
-			$this->define( 'ALNP_ADDON_ALNP_REQUIRED', self::$required_alnp );
-			$this->define( 'ALNP_ADDON_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-			$this->define( 'ALNP_ADDON_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-			$this->define( 'ALNP_ADDON_PLUGIN_FILE', __FILE__ );
-			$this->define( 'ALNP_ADDON_PLUGIN_BASE', plugin_basename( __FILE__ ) );
-			$this->define( 'ALNP_ADDON_SUPPORT_URL', 'https://wordpress.org/support/plugin/alnp-easy-fancybox' );
-			$this->define( 'ALNP_ADDON_REVIEW_URL', 'https://wordpress.org/support/plugin/alnp-easy-fancybox/reviews/' );
+			$this->define( 'ALNP_EASY_FANCYBOX_VERSION', self::$version );
+			$this->define( 'ALNP_EASY_FANCYBOX_ALNP_REQUIRED', self::$required_alnp );
+			$this->define( 'ALNP_EASY_FANCYBOX_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+			$this->define( 'ALNP_EASY_FANCYBOX_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+			$this->define( 'ALNP_EASY_FANCYBOX_PLUGIN_FILE', __FILE__ );
+			$this->define( 'ALNP_EASY_FANCYBOX_PLUGIN_BASE', plugin_basename( __FILE__ ) );
+			$this->define( 'ALNP_EASY_FANCYBOX_SUPPORT_URL', 'https://wordpress.org/support/plugin/alnp-easy-fancybox' );
+			$this->define( 'ALNP_EASY_FANCYBOX_REVIEW_URL', 'https://wordpress.org/support/plugin/alnp-easy-fancybox/reviews/' );
 		}
 
 		/**
@@ -156,7 +156,7 @@ if ( ! class_exists( 'ALNP_Easy_Fancybox' ) ) {
 		 */
 		private function includes() {
 			if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
-				require_once( ALNP_ADDON_PLUGIN_DIR . 'includes/admin/alnp-easy-fancybox-admin.php' );
+				require_once( ALNP_EASY_FANCYBOX_PLUGIN_DIR . 'includes/admin/alnp-easy-fancybox-admin.php' );
 			}
 		}
 
@@ -168,7 +168,7 @@ if ( ! class_exists( 'ALNP_Easy_Fancybox' ) ) {
 		 * @return void
 		 */
 		public function load_textdomain() {
-			load_plugin_textdomain( 'alnp-easy-fancybox', false, dirname( plugin_basename( ALNP_ADDON_PLUGIN_DIR ) ) . '/languages/' );
+			load_plugin_textdomain( 'alnp-easy-fancybox', false, dirname( plugin_basename( ALNP_EASY_FANCYBOX_PLUGIN_DIR ) ) . '/languages/' );
 		}
 
 		/**
@@ -180,13 +180,8 @@ if ( ! class_exists( 'ALNP_Easy_Fancybox' ) ) {
 		 */
 		public function alnp_enqueue_scripts() {
 			if ( is_singular() && in_array( get_post_type(), $this->allowed_post_types() ) ) {
-				wp_register_script( 'alnp-easy-fancybox', ALNP_ADDON_PLUGIN_URL . '/assets/js/alnp-easy-fancybox.js', array( 'jquery' ), self::$version );
+				wp_register_script( 'alnp-easy-fancybox', ALNP_EASY_FANCYBOX_PLUGIN_URL . '/assets/js/alnp-easy-fancybox.js', array( 'jquery' ), self::$version );
 				wp_enqueue_script( 'alnp-easy-fancybox' );
-
-				/*wp_localize_script( 'alnp-easy-fancybox', 'alnp_addon_name', array(
-					'alnpVersion'   => AUTO_LOAD_NEXT_POST_VERSION,
-					'pluginVersion' => self::$version,
-				));*/
 			}
 		}
 

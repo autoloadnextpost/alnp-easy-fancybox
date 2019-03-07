@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="notice notice-error">
-    <p><?php echo sprintf( __( '%1$s requires %2$sAuto Load Next Post%3$s. Install and activate Auto Load Next Post version %4$s or higher.', 'alnp-easy-fancybox' ), esc_html( 'alnp-easy-fancybox', 'alnp-easy-fancybox' ), '<strong>', '</strong>', ALNP_ADDON_ALNP_REQUIRED ); ?></p>
+    <p><?php echo sprintf( __( '%1$s requires %2$sAuto Load Next Post%3$s. Install and activate Auto Load Next Post version %4$s or higher.', 'alnp-easy-fancybox' ), esc_html( 'alnp-easy-fancybox', 'alnp-easy-fancybox' ), '<strong>', '</strong>', ALNP_EASY_FANCYBOX_ALNP_REQUIRED ); ?></p>
 
     <p>
     <?php

@@ -24,7 +24,7 @@ if ( ! class_exists( 'ALNP_Easy_Fancybox_Check' ) ) {
 		 * @access public
 		 */
 		public function __construct() {
-			if ( ! defined( 'AUTO_LOAD_NEXT_POST_VERSION' ) || version_compare( AUTO_LOAD_NEXT_POST_VERSION, ALNP_ADDON_ALNP_REQUIRED, '<' ) ) {
+			if ( ! defined( 'AUTO_LOAD_NEXT_POST_VERSION' ) || version_compare( AUTO_LOAD_NEXT_POST_VERSION, ALNP_EASY_FANCYBOX_ALNP_REQUIRED, '<' ) ) {
 				add_action( 'admin_notices', array( $this, 'alnp_not_installed' ) );
 				return false;
 			}

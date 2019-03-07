@@ -48,12 +48,12 @@ if ( ! class_exists( 'ALNP_Easy_Fancybox_Admin' ) ) {
 		 * @return array  $links
 		 */
 		public function plugin_row_meta( $links, $file, $data ) {
-			if ( $file == plugin_basename( ALNP_ADDON_PLUGIN_FILE ) ) {
+			if ( $file == plugin_basename( ALNP_EASY_FANCYBOX_PLUGIN_FILE ) ) {
 				$links[ 1 ] = sprintf( __( 'Developed By %s', 'alnp-easy-fancybox' ), '<a href="' . $data[ 'AuthorURI' ] . '" aria-label="' . esc_attr__( 'View the Developers Site', 'alnp-easy-fancybox' ) . '">' . $data[ 'Author' ] . '</a>' );
 
 				$row_meta = array(
-					'community' => '<a href="' . esc_url( ALNP_ADDON_SUPPORT_URL ) . '" aria-label="' . esc_attr__( 'Get Support from the Community', 'alnp-easy-fancybox' ). '" target="_blank">' . esc_attr__( 'Community Support', 'alnp-easy-fancybox' ) . '</a>',
-					'review' => '<a href="' . esc_url( ALNP_ADDON_REVIEW_URL ) . '" aria-label="' . esc_attr( __( 'Review Auto Load Next Post: Easy Fancybox on WordPress.org', 'alnp-easy-fancybox' ) ) . '" target="_blank">' . __( 'Leave a Review', 'alnp-easy-fancybox' ) . '</a>',
+					'community' => '<a href="' . esc_url( ALNP_EASY_FANCYBOX_SUPPORT_URL ) . '" aria-label="' . esc_attr__( 'Get Support from the Community', 'alnp-easy-fancybox' ). '" target="_blank">' . esc_attr__( 'Community Support', 'alnp-easy-fancybox' ) . '</a>',
+					'review' => '<a href="' . esc_url( ALNP_EASY_FANCYBOX_REVIEW_URL ) . '" aria-label="' . esc_attr( __( 'Review Auto Load Next Post: Easy Fancybox on WordPress.org', 'alnp-easy-fancybox' ) ) . '" target="_blank">' . __( 'Leave a Review', 'alnp-easy-fancybox' ) . '</a>',
 				);
 
 				$links = array_merge( $links, $row_meta );
