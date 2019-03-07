@@ -32,7 +32,9 @@
     "photo",
     "image"
   ],
+  "constant": "ALNP_EASY_FANCYBOX",
   "class_name": "ALNP_Easy_Fancybox",
+  "localize_script": "alnp_easy_fancybox",
   "dependencies": {
     "grunt": "^1.0.3"
   },
